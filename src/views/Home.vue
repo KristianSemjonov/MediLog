@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="400px">
     <Welcome msg="Teretulemast MediLog eTervisepäeviku lehele"/>
   </div>
 </template>
