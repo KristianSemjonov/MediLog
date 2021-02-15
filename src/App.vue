@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Avaleht</router-link> |
+      <router-link to="/verer6hk">Vererõhk</router-link> |
+      <router-link to="/veresuhkur">Veresuhkur</router-link> |
+      <router-link to="/kehakaal">Kehakaal & KMI</router-link> |
+      <router-link to="/temperatuur">Kehatemperatuur</router-link>
     </div>
     <router-view/>
   </div>
