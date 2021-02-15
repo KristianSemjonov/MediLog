@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <h1>{{ msg }}</h1>
+    <h2>{{ msg }}</h2>
     <p class="introduction">
       MediLog on e-tervise päevik, kus on võimalik mugavalt üles
       märkida oma tervisenäitajad, mida te kodus iseseisvalt igapäevaselt mõõdate - olgu selleks vererõhk

@@ -1,0 +1,97 @@
+<template>
+  <div class="addbloodsugar">
+    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
+    <h3>Sisestage uus veresuhkru mõõtmistulemus</h3>
+    <p>Kasutaja ID: <input v-model="addBloodSugar.userId" placeholder="kustutame, kui login toimib!"></p>
+    <p>Kuupäev: <input v-model="addBloodSugar.date" placeholder=""> (aaaa-kk-pp)</p>
+    <p>Kellaaeg: <input v-model="addBloodSugar.time" placeholder=""> (hh:mm)</p>
+    <p>Veresuhkur: <input v-model="addBloodSugar.bloodSugar" placeholder=""> mmol/l</p>
+    <p>Lisainfo: <input v-model="addBloodSugar.addInfo" placeholder="oluline lisateave"></p>
+    <button v-on:click="saveInHtml()">Salvesta andmed</button>
+
+    <table cellspacing="10">
+      <tbody>
+      <tr>
+        <td>Kasutaja ID: </td>
+        <td><input v-model="addBloodSugar.userId" placeholder="kustutame, kui login toimib!"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Kuupäev: </td>
+        <td><input v-model="addBloodSugar.date" placeholder=""></td>
+        <td><i> (aaaa-kk-pp)</i></td>
+      </tr>
+      <tr>
+        <td>Kellaaeg: </td>
+        <td><input v-model="addBloodSugar.time" placeholder=""></td>
+        <td><i> (hh:mm)</i></td>
+      </tr>
+      <tr>
+        <td>Veresuhkur: </td>
+        <td><input v-model="addBloodSugar.bloodSugar" placeholder=""></td>
+        <td> mmol/l</td>
+      </tr>
+      <tr>
+        <td>Lisainfo: </td>
+        <td><input v-model="addBloodSugar.addInfo" placeholder="oluline lisateave"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <button v-on:click="saveInHtml()">Salvesta andmed</button>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script>
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
+let yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+// document.write(today);
+
+let now = new Date();
+let hours = String(now.getHours()).padStart(2, '0');
+let minutes = String(now.getMinutes() + 1).padStart(2, '0');
+now = hours + ':' + minutes;
+// document.write(now);
+
+let saveInJs = function () {
+  this.$http.get('http://localhost:8080/medilog/bloodsugar',
+      {
+        params: {
+          userId: this.addBloodSugar.userId,
+          date: this.addBloodSugar.date,
+          time: this.addBloodSugar.time,
+          bloodSugar: this.addBloodSugar.bloodSugar,
+          addInfo: this.addBloodPressure.addInfo,
+        }
+      })
+  alert('Andmed on salvestatud');
+}
+export default {
+  name: "AddBloodSugar",
+  components: {},
+  data: function () {
+    return {
+      addBloodSugar: {date :today, time :now}
+    }
+  },
+  methods:
+      {
+        saveInHtml: saveInJs,
+      },
+  mounted() {
+  }
+}
+</script>
+
+<style scoped>
+table {
+  text-align: -webkit-center;
+}
+</style>

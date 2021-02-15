@@ -3,17 +3,75 @@
     <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
     <h3>Sisestage uus vererõhu mõõtmistulemus</h3>
     <p>Kasutaja ID: <input v-model="addBloodPressure.userId" placeholder="kustutame, kui login toimib!"></p>
-    <p>Kuupäev: <input v-model="addBloodPressure.date" placeholder=""></p>
-    <p>Kellaaeg: <input v-model="addBloodPressure.time" placeholder=""></p>
-    <p>Süstoolne näit: <input v-model="addBloodPressure.systolic" placeholder='nn "ülemine"'> (mmHg)</p>
-    <p>Diastoolne näit: <input v-model="addBloodPressure.diastolic" placeholder='nn "alumine"'> (mmHg)</p>
-    <p>Pulss: <input v-model="addBloodPressure.pulse" placeholder=""> (lööki/min)</p>
+    <p>Kuupäev: <input v-model="addBloodPressure.date" placeholder=""> (aaaa-kk-pp)</p>
+    <p>Kellaaeg: <input v-model="addBloodPressure.time" placeholder=""> (hh:mm)</p>
+    <p>Süstoolne näit: <input v-model="addBloodPressure.systolic" placeholder='nn "ülemine"'> mmHg</p>
+    <p>Diastoolne näit: <input v-model="addBloodPressure.diastolic" placeholder='nn "alumine"'> mmHg</p>
+    <p>Pulss: <input v-model="addBloodPressure.pulse" placeholder=""> lööki/min</p>
     <p>Lisainfo: <input v-model="addBloodPressure.addInfo" placeholder="oluline lisateave"></p>
     <button v-on:click="saveInHtml()">Salvesta andmed</button>
+
+    <table cellspacing="10">
+      <tbody>
+      <tr>
+        <td>Kasutaja ID: </td>
+        <td><input v-model="addBloodPressure.userId" placeholder="kustutame, kui login toimib!"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Kuupäev: </td>
+        <td><input v-model="addBloodPressure.date" placeholder=""></td>
+        <td><i> (aaaa-kk-pp)</i></td>
+      </tr>
+      <tr>
+        <td>Kellaaeg: </td>
+        <td><input v-model="addBloodPressure.time" placeholder=""></td>
+        <td><i> (hh:mm)</i></td>
+      </tr>
+      <tr>
+        <td>Süstoolne näit: </td>
+        <td><input v-model="addBloodPressure.systolic" placeholder='nn "ülemine"'></td>
+        <td> mmHg</td>
+      </tr>
+      <tr>
+        <td>Diastoolne näit: </td>
+        <td><input v-model="addBloodPressure.diastolic" placeholder='nn "alumine"'></td>
+        <td> mmHg</td>
+      </tr>
+      <tr>
+        <td>Pulss: </td>
+        <td><input v-model="addBloodPressure.pulse" placeholder=""></td>
+        <td> lööki/min</td>
+      </tr>
+      <tr>
+        <td>Lisainfo: </td>
+        <td><input v-model="addBloodPressure.addInfo" placeholder="oluline lisateave"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <button v-on:click="saveInHtml()">Salvesta andmed</button>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
+let yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+// document.write(today);
+
+let now = new Date();
+let hours = String(now.getHours()).padStart(2, '0');
+let minutes = String(now.getMinutes() + 1).padStart(2, '0');
+now = hours + ':' + minutes;
+// document.write(now);
+
 let saveInJs = function () {
   this.$http.get('http://localhost:8080/medilog/bloodpressure',
       {
@@ -27,7 +85,7 @@ let saveInJs = function () {
           addInfo: this.addBloodPressure.addInfo,
         }
       })
-  alert('Andmed on edukalt salvestatud');
+  alert('Andmed on salvestatud');
 }
 
 export default {
@@ -35,9 +93,7 @@ export default {
   components: {},
   data: function () {
     return {
-      addBloodPressure: {},
-      bloodPressure: [],
-
+      addBloodPressure: {date: today, time: now}
     }
   },
   methods:
@@ -45,7 +101,13 @@ export default {
         saveInHtml: saveInJs,
       },
   mounted() {
-
   }
 }
 </script>
+
+<style scoped>
+table {
+  text-align: -webkit-center;
+}
+</style>
+
