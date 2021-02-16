@@ -4,8 +4,6 @@
     <Welcome msg="Teretulemast MediLog eTervisepäeviku lehele"/>
     <br>
 
-    <div class="Contact"><a href="mailto:valiit.medilog@gmail.com?Subject=Tagasiside">Kirjuta meile!</a></div>
-
 
   </div>
 </template>
@@ -26,3 +24,9 @@ export default {
 <style scoped>
 
 </style>
+
+<!--#FBD46D - helekollane-->
+<!--#F9A828 - oranz-->
+<!--#07617D - roheline-->
+<!--#2E383F   tumeroheline(tekst)-->
+<!--#ECECEB - valge (taust)-->

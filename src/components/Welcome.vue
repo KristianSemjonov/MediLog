@@ -10,7 +10,10 @@
       <br><br>
       Selleks, et sisestada oma tervisenäitajate mõõtmistulemusi ja vaadata oma mõõtmistulemustega tervisepäevikut,
       palun registreeruge MediLog e-Tervisepäeviku kasutajaks alloleval lingil:</p>
+
     <router-link to="/uuskasutaja">Uue kasutaja loomine</router-link>
+
+    <div class="Contact"><a href="mailto:valiit.medilog@gmail.com?Subject=Tagasiside">Kirjuta meile!</a></div>
     <br>
   </div>
 </template>
@@ -51,8 +54,9 @@ table {
 .Introduction {
   text-align: center;
   margin-inline: 10%;
-
-
+}
+.Contact{
+  margin-top: 20px;
 
 }
 </style>
