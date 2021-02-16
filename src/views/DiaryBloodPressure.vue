@@ -1,6 +1,6 @@
 <template>
   <div class="diarybloodpressure">
-    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
+    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Vaadake päevikut vererõhu mõõtmistulemustega</h3>
     <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
     <button v-on:click="getData()">Vaata päevikut vererõhu mõõtmistulemustega</button>
