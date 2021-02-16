@@ -1,6 +1,6 @@
 <template>
   <div class="addbloodsugar">
-    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
+    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Sisestage uus veresuhkru mõõtmistulemus</h3>
     <table cellspacing="10">
       <tbody>
