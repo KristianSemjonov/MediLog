@@ -2,13 +2,6 @@
   <div class="addbloodsugar">
     <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
     <h3>Sisestage uus veresuhkru mõõtmistulemus</h3>
-    <p>Kasutaja ID: <input v-model="addBloodSugar.userId" placeholder="kustutame, kui login toimib!"></p>
-    <p>Kuupäev: <input v-model="addBloodSugar.date" placeholder=""> (aaaa-kk-pp)</p>
-    <p>Kellaaeg: <input v-model="addBloodSugar.time" placeholder=""> (hh:mm)</p>
-    <p>Veresuhkur: <input v-model="addBloodSugar.bloodSugar" placeholder=""> mmol/l</p>
-    <p>Lisainfo: <input v-model="addBloodSugar.addInfo" placeholder="oluline lisateave"></p>
-    <button v-on:click="saveInHtml()">Salvesta andmed</button>
-
     <table cellspacing="10">
       <tbody>
       <tr>
@@ -73,6 +66,7 @@ let saveInJs = function () {
       })
   alert('Andmed on salvestatud');
 }
+
 export default {
   name: "AddBloodSugar",
   components: {},
