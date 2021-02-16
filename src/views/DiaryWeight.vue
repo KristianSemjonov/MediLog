@@ -1,5 +1,5 @@
 <template>
-
+  <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
 </template>
 
 <script>

@@ -1,16 +1,7 @@
 <template>
   <div class="addbloodpressure">
-    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
+    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Sisestage uus vererõhu mõõtmistulemus</h3>
-    <p>Kasutaja ID: <input v-model="addBloodPressure.userId" placeholder="kustutame, kui login toimib!"></p>
-    <p>Kuupäev: <input v-model="addBloodPressure.date" placeholder=""> (aaaa-kk-pp)</p>
-    <p>Kellaaeg: <input v-model="addBloodPressure.time" placeholder=""> (hh:mm)</p>
-    <p>Süstoolne näit: <input v-model="addBloodPressure.systolic" placeholder='nn "ülemine"'> mmHg</p>
-    <p>Diastoolne näit: <input v-model="addBloodPressure.diastolic" placeholder='nn "alumine"'> mmHg</p>
-    <p>Pulss: <input v-model="addBloodPressure.pulse" placeholder=""> lööki/min</p>
-    <p>Lisainfo: <input v-model="addBloodPressure.addInfo" placeholder="oluline lisateave"></p>
-    <button v-on:click="saveInHtml()">Salvesta andmed</button>
-
     <table cellspacing="10">
       <tbody>
       <tr>

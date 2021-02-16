@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="400px">
+    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Uue kasutaja loomiseks palun täitke allolevad väljad:</h3>
     <table cellspacing="10">
       <tbody>

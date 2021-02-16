@@ -3,8 +3,6 @@
     <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <Welcome msg="Teretulemast MediLog eTervisepäeviku lehele"/>
     <br>
-
-
   </div>
 </template>
 

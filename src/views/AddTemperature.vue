@@ -1,8 +1,7 @@
 <template>
   <div class="addtemperature">
-    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="300px">
+    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Sisestage uus kehatemperatuuri mõõtmistulemus</h3>
-
     <table cellspacing="10">
       <tbody>
       <tr>
