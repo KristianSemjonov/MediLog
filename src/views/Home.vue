@@ -1,11 +1,12 @@
 <template>
   <div class="Home">
-    <img alt="Medilog logo" src="../assets/MedilogSmall.jpg" height="400px">
+    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <Welcome msg="Teretulemast MediLog eTervisepäeviku lehele"/>
     <br>
-    <p>Selleks, et sisestada oma tervisenäitajate mõõtmistulemusi ja vaadata oma mõõtmistulemustega tervisepäevikut,
-      palun registreeruge MediLog eTervisepäeviku kasutajaks alloleval lingil:</p>
-    <router-link to="/uuskasutaja">Uue kasutaja loomine</router-link>
+
+    <div class="Contact"><a href="mailto:valiit.medilog@gmail.com?Subject=Tagasiside">Kirjuta meile!</a></div>
+
+
   </div>
 </template>
 
@@ -19,10 +20,9 @@ export default {
     Welcome
   }
 }
+
 </script>
 
 <style scoped>
-table {
-  text-align: -webkit-center;
-}
+
 </style>
