@@ -54,7 +54,7 @@ now = hours + ':' + minutes;
 // document.write(now);
 
 let saveInJs = function () {
-  this.$http.get('http://localhost:8080/medilog/bloodsugar',
+  this.$http.post('/medilog/bloodsugar', {},
       {
         params: {
           userId: this.addBloodSugar.userId,
@@ -63,8 +63,8 @@ let saveInJs = function () {
           bloodSugar: this.addBloodSugar.bloodSugar,
           addInfo: this.addBloodPressure.addInfo,
         }
-      })
-  alert('Andmed on salvestatud');
+      }).then(() => alert('Andmed on salvestatud'))
+      .catch(() => alert("Palun täitke kohustuslikud väljad"));
 }
 
 export default {

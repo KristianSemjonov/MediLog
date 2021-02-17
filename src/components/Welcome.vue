@@ -11,8 +11,9 @@
       Selleks, et sisestada oma tervisenäitajate mõõtmistulemusi ja vaadata oma mõõtmistulemustega tervisepäevikut,
       palun registreeruge MediLog e-Tervisepäeviku kasutajaks alloleval lingil:</p>
 
-    <router-link to="/uuskasutaja">Uue kasutaja loomine</router-link>
-
+    <router-link to="/uuskasutaja">Uue kasutaja loomine</router-link> |
+    <router-link to="/login">Logi sisse</router-link>
+    <br>
     <div class="Contact"><a href="mailto:valiit.medilog@gmail.com?Subject=Tagasiside">Kirjuta meile!</a></div>
     <br>
   </div>

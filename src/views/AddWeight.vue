@@ -31,7 +31,7 @@
       </tr>
       <tr>
         <td>KMI: </td>
-        <td><input v-model="addWeight.bmi" placeholder="" disabled></td>
+        <td><input v-model.number="calculatedBmi" placeholder="" disabled></td>
         <td> kg/m2</td>
       </tr>
       <tr>
@@ -63,10 +63,8 @@ let minutes = String(now.getMinutes() + 1).padStart(2, '0');
 now = hours + ':' + minutes;
 // document.write(now);
 
-// let bmi = this.addWeight.weight/(this.addWeight.height**2);
-
 let saveInJs = function () {
-  this.$http.get('http://localhost:8080/medilog/weight',
+  this.$http.post('/medilog/weight', {},
       {
         params: {
           userId: this.addWeight.userId,
@@ -74,11 +72,11 @@ let saveInJs = function () {
           time: this.addWeight.time,
           weight: this.addWeight.weight,
           height: this.addWeight.height,
-          bmi: this.addWeight.bmi,
+          bmi: this.calculatedBmi,
           addInfo: this.addWeight.addInfo,
         }
-      })
-  alert('Andmed on salvestatud');
+      }).then(() => alert('Andmed on salvestatud'))
+      .catch(() => alert("Palun täitke kohustuslikud väljad"));
 }
 
 export default {
@@ -94,6 +92,11 @@ export default {
         saveInHtml: saveInJs,
       },
   mounted() {
+  },
+  computed:{
+    calculatedBmi: function(){
+      return (this.addWeight.weight/(this.addWeight.height**2)).toFixed(1);
+    }
   }
 }
 </script>
