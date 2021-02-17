@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import NewUser from "../views/NewUser";
+import Login from "../views/Login";
 import BloodPressure from "../views/BloodPressure";
 import AddBloodPressure from "../views/AddBloodPressure";
 import DiaryBloodPressure from "../views/DiaryBloodPressure";
@@ -27,6 +28,11 @@ const routes = [
     path: '/uuskasutaja',
     name: 'Uue kasutaja loomine',
     component: NewUser
+  },
+  {
+    path: '/login',
+    name: 'Logi sisse',
+    component: Login
   },
   // {
   //   path: '/bloodpressure',

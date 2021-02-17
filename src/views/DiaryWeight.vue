@@ -1,13 +1,63 @@
 <template>
+  <div class="diarybloodsugar">
   <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
+    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
+    <button v-on:click="getData()">Vaata päevikut kehakaalu mõõtmistulemustega</button>
+    <table border="1">
+      <tr>
+        <th>Kuupäev</th>
+        <th>Kellaaeg</th>
+        <th>Kehakaal (kg)</th>
+        <th>Pikkus (m)</th>
+        <th>KMI (kg/m2)</th>
+        <th>Lisainfo</th>
+      </tr>
+      <tr v-for="row in diaryWeight">
+        <td>{{ row.date }}</td>
+        <td>{{ row.time }}</td>
+        <td>{{ row.weight }}</td>
+        <td>{{ row.height }}</td>
+        <td>{{ row.bmi }}</td>
+        <td>{{ row.addInfo }}</td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <script>
+let getData = function () {
+  this.$http.get('http://localhost:8080/medilog/diaryweight?userid=' + this.userId)
+      .then(response => this.diaryWeight = response.data)
+      .catch(response => console.log(response))
+}
 export default {
-  name: "DiaryWeight"
+  name: "DiaryWeight",
+  components: {},
+  data: function () {
+    return {
+      userId: '',
+      date: '',
+      time: '',
+      weight: '',
+      height: '',
+      bmi: '',
+      addInfo: '',
+      diaryWeight: []
+    }
+  },
+  methods:
+      {
+        getData: getData
+      },
+  mounted() {
+    this.getData();
+  }
 }
 </script>
 
 <style scoped>
-
+table {
+  text-align: -webkit-center;
+}
 </style>

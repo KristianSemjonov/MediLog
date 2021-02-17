@@ -24,14 +24,20 @@
         <td>Salasõna:</td>
         <td><input v-model="newUser.password" placeholder="palun jätke meelde"></td>
       </tr>
+      <tr>
+        <td></td>
+        <td><button v-on:click="saveInHtml()">Salvesta andmed</button></td>
+      </tr>
       </tbody>
     </table>
   </div>
 </template>
 
 <script>
+
+
 let saveInJs = function () {
-  this.$http.get('http://localhost:8080/medilog',
+  this.$http.post('/medilog/createuser', {},
       {
         params: {
           firstName: this.newUser.firstName,
@@ -40,8 +46,8 @@ let saveInJs = function () {
           username: this.newUser.username,
           password: this.newUser.password,
         }
-      })
-  alert('Registreerimine õnnestus, teie andmed on salvestatud');
+      }).then(() => alert('Registreerimine õnnestus, teie andmed on salvestatud'))
+      .catch(() => alert("Registreerimine ei õnnestunud"));
 }
 
 export default {
