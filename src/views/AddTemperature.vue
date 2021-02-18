@@ -54,7 +54,7 @@ now = hours + ':' + minutes;
 // document.write(now);
 
 let saveInJs = function () {
-  this.$http.get('http://localhost:8080/medilog/temperature',
+  this.$http.post('/medilog/temperature', {},
       {
         params: {
           userId: this.addTemperature.userId,
@@ -63,8 +63,8 @@ let saveInJs = function () {
           temperature: this.addTemperature.temperature,
           addInfo: this.addTemperature.addInfo,
         }
-      })
-  alert('Andmed on salvestatud');
+      }).then(() => alert('Andmed on salvestatud'))
+      .catch(() => alert("Palun täitke kohustuslikud väljad"));
 }
 export default {
   name: "AddTemperature",
