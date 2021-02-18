@@ -2,7 +2,7 @@
   <div class="Home">
     <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Uue kasutaja loomiseks palun täitke allolevad väljad:</h3>
-    <table cellspacing="10">
+    <table class="userTable" cellspacing="10">
       <tbody>
       <tr>
         <td>Eesnimi:</td>
@@ -68,7 +68,9 @@ export default {
 </script>
 
 <style scoped>
-table {
+.userTable {
   text-align: -webkit-center;
+  margin-right: auto;
+  margin-left: auto;
 }
 </style>

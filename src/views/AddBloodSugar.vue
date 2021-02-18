@@ -2,7 +2,7 @@
   <div class="addbloodsugar">
     <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Sisestage uus veresuhkru mõõtmistulemus</h3>
-    <table cellspacing="10">
+    <table class="tableBloodSugar" cellspacing="5">
       <tbody>
       <tr>
         <td>Kasutaja ID: </td>
@@ -85,7 +85,9 @@ export default {
 </script>
 
 <style scoped>
-table {
+.tableBloodSugar {
   text-align: -webkit-center;
+  margin-right: auto;
+  margin-left:auto;
 }
 </style>
