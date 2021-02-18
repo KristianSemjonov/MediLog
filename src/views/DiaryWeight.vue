@@ -36,23 +36,13 @@ export default {
   components: {},
   data: function () {
     return {
-      userId: '',
-      date: '',
-      time: '',
-      weight: '',
-      height: '',
-      bmi: '',
-      addInfo: '',
       diaryWeight: []
     }
   },
   methods:
       {
         getData: getData
-      },
-  mounted() {
-    this.getData();
-  }
+      }
 }
 </script>
 

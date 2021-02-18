@@ -4,7 +4,7 @@
     <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
     <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
     <button v-on:click="getData()">Vaata päevikut veresuhkru mõõtmistulemustega</button>
-    <table class="dairySugar" border="1">
+    <table class="dairyBloodSugar" border="1">
       <tr class="dairySugar2">
         <th>Kuupäev</th>
         <th>Kellaaeg</th>
@@ -32,26 +32,18 @@ export default {
   components: {},
   data: function () {
     return {
-      userId: '',
-      date: '',
-      time: '',
-      bloodSugar: '',
-      addInfo: '',
       diaryBloodSugar: []
     }
   },
   methods:
       {
         getData: getData
-      },
-  mounted() {
-    this.getData();
-  }
+      }
 }
 </script>
 
 <style scoped>
-.dairySugar {
+.dairyBloodSugar {
   text-align: -webkit-center;
   margin-left: auto;
   margin-right: auto;

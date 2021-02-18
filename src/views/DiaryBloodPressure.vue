@@ -37,23 +37,13 @@ export default {
   components: {},
   data: function () {
     return {
-      userId: '',
-      date: '',
-      time: '',
-      systolic: '',
-      diastolic: '',
-      pulse: '',
-      addInfo: '',
       diaryBloodPressure: []
     }
   },
   methods:
       {
         getData: getData
-      },
-  mounted() {
-    this.getData();
-  }
+      }
 }
 </script>
 
