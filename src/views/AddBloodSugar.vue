@@ -61,7 +61,7 @@ let saveInJs = function () {
           date: this.addBloodSugar.date,
           time: this.addBloodSugar.time,
           bloodSugar: this.addBloodSugar.bloodSugar,
-          addInfo: this.addBloodPressure.addInfo,
+          addInfo: this.addBloodSugar.addInfo,
         }
       }).then(() => alert('Andmed on salvestatud'))
       .catch(() => alert("Palun täitke kohustuslikud väljad"));

@@ -1,6 +1,8 @@
 g<template>
   <div class="addbloodpressure">
+    <div class logo back>
     <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    </div>
     <h3>Sisestage uus vererõhu mõõtmistulemus</h3>
     <table class="tableBloodPressure" cellspacing="5">
       <tbody>
@@ -97,6 +99,9 @@ export default {
 </script>
 
 <style scoped>
+.logo back {
+  background-color: #4f8a8b;
+}
 .tableBloodPressure {
   text-align: -webkit-center;
   margin-left: auto;
