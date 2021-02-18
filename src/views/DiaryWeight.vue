@@ -4,7 +4,7 @@
     <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
     <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
     <button v-on:click="getData()">Vaata päevikut kehakaalu mõõtmistulemustega</button>
-    <table border="1">
+    <table class="weightTable" border="1">
       <tr>
         <th>Kuupäev</th>
         <th>Kellaaeg</th>
@@ -57,7 +57,9 @@ export default {
 </script>
 
 <style scoped>
-table {
+.weightTable {
   text-align: -webkit-center;
+  margin-right: auto;
+  margin-left: auto;
 }
 </style>

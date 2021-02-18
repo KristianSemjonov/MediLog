@@ -4,7 +4,7 @@
     <h3>Vaadake päevikut kehatemperatuuri mõõtmistulemustega</h3>
     <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
     <button v-on:click="getData()">Vaata päevikut kehatemperatuuri mõõtmistulemustega</button>
-    <table border="1">
+    <table class="tableTemp" border="1">
       <tr>
         <th>Kuupäev</th>
         <th>Kellaaeg</th>
@@ -51,8 +51,10 @@ export default {
 </script>
 
 <style scoped>
-table {
+.tableTemp {
   text-align: -webkit-center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 </style>

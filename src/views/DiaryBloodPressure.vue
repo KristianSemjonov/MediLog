@@ -4,7 +4,7 @@
     <h3>Vaadake päevikut vererõhu mõõtmistulemustega</h3>
     <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
     <button v-on:click="getData()">Vaata päevikut vererõhu mõõtmistulemustega</button>
-    <table border="1">
+    <table class="diaryBloodPressure" border="1">
       <tr>
         <th>Kuupäev</th>
         <th>Kellaaeg</th>
@@ -58,7 +58,9 @@ export default {
 </script>
 
 <style scoped>
-table {
+.diaryBloodPressure {
   text-align: -webkit-center;
+  margin-right: auto;
+  margin-left: auto;
 }
 </style>

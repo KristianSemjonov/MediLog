@@ -4,8 +4,8 @@
     <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
     <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
     <button v-on:click="getData()">Vaata päevikut veresuhkru mõõtmistulemustega</button>
-    <table border="1">
-      <tr>
+    <table class="dairySugar" border="1">
+      <tr class="dairySugar2">
         <th>Kuupäev</th>
         <th>Kellaaeg</th>
         <th>Veresuhkur (mmol/l)</th>
@@ -51,7 +51,10 @@ export default {
 </script>
 
 <style scoped>
-table {
+.dairySugar {
   text-align: -webkit-center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 </style>
