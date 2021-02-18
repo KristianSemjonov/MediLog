@@ -24,6 +24,11 @@
         <td>Salasõna:</td>
         <td><input v-model="newUser.password" placeholder="palun jätke meelde"></td>
       </tr>
+      <tr>
+        <td></td>
+        <button v-on:click="saveInHtml()">Salvesta andmed</button>
+        <td></td>
+      </tr>
       </tbody>
     </table>
   </div>
