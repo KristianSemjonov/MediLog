@@ -2,7 +2,7 @@
   <div class="Home">
     <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Palun sisestage oma kasutajanimi ja salasõna:</h3>
-    <table cellspacing="10">
+    <table class="loginTable" cellspacing="10">
       <tbody>
       <tr>
         <td>Kasutajanimi:</td>
@@ -56,7 +56,10 @@ export default {
 </script>
 
 <style scoped>
-table {
+.loginTable {
   text-align: -webkit-center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 </style>

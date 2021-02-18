@@ -2,7 +2,7 @@
   <div class="addtemperature">
     <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
     <h3>Sisestage uus kehatemperatuuri mõõtmistulemus</h3>
-    <table cellspacing="10">
+    <table class="tableTemperature" cellspacing="5">
       <tbody>
       <tr>
         <td>Kasutaja ID: </td>
@@ -84,8 +84,10 @@ export default {
 </script>
 
 <style scoped>
-table {
+.tableTemperature {
   text-align: -webkit-center;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
