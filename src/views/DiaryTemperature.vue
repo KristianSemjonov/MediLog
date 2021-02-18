@@ -14,7 +14,7 @@
       <tr v-for="row in diaryTemperature">
         <td>{{ row.date }}</td>
         <td>{{ row.time }}</td>
-        <td>{{ row.temperature }}</td>
+        <td>{{ row.temp }}</td>
         <td>{{ row.addInfo }}</td>
       </tr>
     </table>
@@ -32,21 +32,13 @@ export default {
   components: {},
   data: function () {
     return {
-      userId: '',
-      date: '',
-      time: '',
-      temperature: '',
-      addInfo: '',
       diaryTemperature: []
     }
   },
   methods:
       {
         getData: getData
-      },
-  mounted() {
-    this.getData();
-  }
+      }
 }
 </script>
 

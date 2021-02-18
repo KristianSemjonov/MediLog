@@ -46,8 +46,9 @@ let saveInJs = function () {
           username: this.newUser.username,
           password: this.newUser.password,
         }
-      }).then(() => alert('Registreerimine õnnestus, teie andmed on salvestatud'))
-      .catch(() => alert("Registreerimine ei õnnestunud"));
+      })
+      .then(() => alert('Registreerimine õnnestus, teie andmed on salvestatud'))
+      .catch(() => alert("Registreerimine ei õnnestunud, palun proovige uuseti"));
 }
 
 export default {

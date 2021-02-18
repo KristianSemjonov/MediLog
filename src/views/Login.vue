@@ -25,16 +25,18 @@
 
 <script>
 let getData = function () {
-  this.$http.get('/medilog/login?username=' + this.username + '&password=' + this.password)
+  this.$http.get('/medilog/login?username=' + this.login.username + '&password=' + this.login.password)
       .then(response => {
-        localStorage.setItem('user-token', response) // store the token
-        this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + token
-        this.login = response.data
+        localStorage.setItem('user-token', response.data) // store the token
+        this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + response.data
         alert('Olete edukalt sisse loginud')
       })
-      .catch(response => console.log(response))
-  // alert("Sisselogimine ebaõnnestus")
+      .catch(response => {
+        console.log(response)
+        alert("Sisselogimine ebaõnnestus")
+      })
 }
+
 export default {
   name: "Login",
   components: {},
@@ -42,16 +44,13 @@ export default {
     return {
       username: '',
       password: '',
-      login: []
+      login: {}
     }
   },
   methods:
       {
         getData: getData
-      },
-  mounted() {
-    this.getData();
-  }
+      }
 }
 </script>
 
