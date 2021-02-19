@@ -27,7 +27,7 @@
 
 <script>
 let getData = function () {
-  this.$http.get('/diarybloodpressure?userid=' + this.userId)
+  this.$http.get('http://localhost:8080/medilog/diarybloodpressure?userid=' + this.userId)
       .then(response => this.diaryBloodPressure = response.data)
       .catch(response => console.log(response))
 }
@@ -44,6 +44,9 @@ export default {
       {
         getData: getData
       }
+      , mounted() {
+    this.getData();
+  }
 }
 </script>
 

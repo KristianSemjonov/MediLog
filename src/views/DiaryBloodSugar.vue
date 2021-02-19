@@ -3,7 +3,7 @@
     <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
 <!--    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>-->
-    <button v-on:click="getData()">Ava päevik</button>
+<!--    <button v-on:click="getData()">Ava päevik</button>-->
     <table class="dairyBloodSugar" border="1">
       <tr class="dairySugar2">
         <th>Kuupäev</th>
@@ -39,6 +39,10 @@ export default {
       {
         getData: getData
       }
+      ,
+  mounted() {
+    this.getData();
+  }
 }
 
 </script>
