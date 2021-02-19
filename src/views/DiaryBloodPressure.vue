@@ -44,6 +44,9 @@ export default {
       {
         getData: getData
       }
+      , mounted() {
+    this.getData();
+  }
 }
 </script>
 
