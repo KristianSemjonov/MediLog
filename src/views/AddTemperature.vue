@@ -21,7 +21,7 @@
       </tr>
       <tr>
         <td>Kehatemperatuur: </td>
-        <td><input v-model="addTemperature.temperature" placeholder=""></td>
+        <td><input v-model="addTemperature.temp" placeholder=""></td>
         <td> °C</td>
       </tr>
       <tr>
@@ -58,7 +58,7 @@ let saveInJs = function () {
           // userId: this.addTemperature.userId,
           date: this.addTemperature.date,
           time: this.addTemperature.time,
-          temperature: this.addTemperature.temperature,
+          temp: this.addTemperature.temp,
           addInfo: this.addTemperature.addInfo,
         }
       }).then(() => alert('Andmed on salvestatud'))
@@ -76,8 +76,6 @@ export default {
       {
         saveInHtml: saveInJs,
       },
-  mounted() {
-  }
 }
 </script>
 
