@@ -26,13 +26,18 @@ const routes = [
   },
   {
     path: '/uuskasutaja',
-    name: 'Uue kasutaja loomine',
+    name: 'Kasutaja loomine',
     component: NewUser
   },
   {
     path: '/login',
     name: 'Logi sisse',
     component: Login
+  },
+  {
+    path: '/logout',
+    name: 'Logi välja',
+    component: Logout
   },
   // {
   //   path: '/bloodpressure',

@@ -33,6 +33,7 @@ let getData = function () {
         localStorage.setItem('user-token', response.data) // store the token
         this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + response.data
         alert('Olete edukalt sisse loginud')
+        router.push('/')
       })
       .catch(response => {
         console.log(response)

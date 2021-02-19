@@ -2,14 +2,12 @@
   <div class="welcome">
     <h2>{{ msg }}</h2>
     <p class="Introduction">
-      MediLog on e-tervise päevik, kus on võimalik mugavalt üles
-      märkida oma tervisenäitajad, mida te kodus iseseisvalt igapäevaselt mõõdate - olgu selleks vererõhk
-      või veresuhkur, või soovite jälgida kehakaalu muutuseid.<br><br>
-      Peale sisselogimist ja esimeste andmete sisestamist moodustub teie isiklik tervisenäitajate andmebaas,
+      Medilog on e-tervise päevik, kus on võimalik mugavalt üles märkida oma tervisenäitajad, mida te kodus iseseisvalt igapäevaselt mõõdate - vererõhk
+      või veresuhkur või soovite jälgida kehakaalu muutuseid. Peale sisselogimist ja esimeste andmete sisestamist moodustub teie isiklik tervisenäitajate andmebaas,
       mida saate soovi korral päevikuna vaadelda ja vajaduse korral ka oma raviarstile edastada.
       <br><br>
       Selleks, et sisestada oma tervisenäitajate mõõtmistulemusi ja vaadata oma mõõtmistulemustega tervisepäevikut,
-      palun registreeruge MediLog e-Tervisepäeviku kasutajaks alloleval lingil:</p>
+      palun registreeruge MediLog e-tervise päeviku kasutajaks alloleval lingil:</p>
 
     <router-link to="/uuskasutaja">Kasutaja loomine</router-link>
     |
