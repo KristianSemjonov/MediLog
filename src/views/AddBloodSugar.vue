@@ -1,14 +1,14 @@
 <template>
   <div class="addbloodsugar">
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Sisestage uus veresuhkru mõõtmistulemus</h3>
     <table class="tableBloodSugar" cellspacing="5">
       <tbody>
-      <tr>
-        <td>Kasutaja ID: </td>
-        <td><input v-model="addBloodSugar.userId" placeholder="kustutame, kui login toimib!"></td>
-        <td></td>
-      </tr>
+<!--      <tr>-->
+<!--        <td>Kasutaja ID: </td>-->
+<!--        <td><input v-model="addBloodSugar.userId" placeholder="kustutame, kui login toimib!"></td>-->
+<!--        <td></td>-->
+<!--      </tr>-->
       <tr>
         <td>Kuupäev: </td>
         <td><input v-model="addBloodSugar.date" placeholder=""></td>
@@ -26,7 +26,7 @@
       </tr>
       <tr>
         <td>Lisainfo: </td>
-        <td><input v-model="addBloodSugar.addInfo" placeholder="oluline lisateave"></td>
+        <td><textarea input v-model="addBloodSugar.addInfo" placeholder="oluline lisateave"></textarea></td>
         <td></td>
       </tr>
       <tr>
@@ -45,19 +45,17 @@ let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
 let yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
-// document.write(today);
 
 let now = new Date();
 let hours = String(now.getHours()).padStart(2, '0');
 let minutes = String(now.getMinutes() + 1).padStart(2, '0');
 now = hours + ':' + minutes;
-// document.write(now);
 
 let saveInJs = function () {
   this.$http.post('/medilog/bloodsugar', {},
       {
         params: {
-          userId: this.addBloodSugar.userId,
+          // userId: this.addBloodSugar.userId,
           date: this.addBloodSugar.date,
           time: this.addBloodSugar.time,
           bloodSugar: this.addBloodSugar.bloodSugar,

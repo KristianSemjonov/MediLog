@@ -1,9 +1,9 @@
 <template>
   <div class="diaryTemperature">
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Vaadake päevikut kehatemperatuuri mõõtmistulemustega</h3>
-    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
-    <button v-on:click="getData()">Vaata päevikut kehatemperatuuri mõõtmistulemustega</button>
+<!--    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>-->
+    <button v-on:click="getData()">Ava päevik</button>
     <table class="tableTemp" border="1">
       <tr>
         <th>Kuupäev</th>
@@ -40,13 +40,12 @@ export default {
         getData: getData
       }
 }
-</script>
 
+</script>
 <style scoped>
 .tableTemp {
   text-align: -webkit-center;
   margin-right: auto;
   margin-left: auto;
 }
-
 </style>

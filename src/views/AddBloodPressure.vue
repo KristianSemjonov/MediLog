@@ -1,16 +1,14 @@
 g<template>
   <div class="addbloodpressure">
-    <div class logo back>
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
-    </div>
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Sisestage uus vererõhu mõõtmistulemus</h3>
     <table class="tableBloodPressure" cellspacing="5">
       <tbody>
-      <tr>
-        <td>Kasutaja ID: </td>
-        <td><input v-model="addBloodPressure.userId" placeholder="kustutame, kui login toimib!"></td>
-        <td></td>
-      </tr>
+<!--      <tr>-->
+<!--        <td>Kasutaja ID: </td>-->
+<!--        <td><input v-model="addBloodPressure.userId" placeholder="kustutame, kui login toimib!"></td>-->
+<!--        <td></td>-->
+<!--      </tr>-->
       <tr>
         <td>Kuupäev: </td>
         <td><input v-model="addBloodPressure.date" placeholder=""></td>
@@ -38,7 +36,7 @@ g<template>
       </tr>
       <tr>
         <td>Lisainfo: </td>
-        <td><input v-model="addBloodPressure.addInfo" placeholder="oluline lisateave"></td>
+        <td><textarea input v-model="addBloodPressure.addInfo" placeholder="oluline lisateave"></textarea></td>
         <td></td>
       </tr>
       <tr>
@@ -57,19 +55,17 @@ let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
 let yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
-// document.write(today);
 
 let now = new Date();
 let hours = String(now.getHours()).padStart(2, '0');
 let minutes = String(now.getMinutes() + 1).padStart(2, '0');
 now = hours + ':' + minutes;
-// document.write(now);
 
 let saveInJs = function () {
   this.$http.post('/medilog/bloodpressure', {},
       {
         params: {
-          userId: this.addBloodPressure.userId,
+          // userId: this.addBloodPressure.userId,
           date: this.addBloodPressure.date,
           time: this.addBloodPressure.time,
           systolic: this.addBloodPressure.systolic,
@@ -99,9 +95,6 @@ export default {
 </script>
 
 <style scoped>
-.logo back {
-  background-color: #4f8a8b;
-}
 .tableBloodPressure {
   text-align: -webkit-center;
   margin-left: auto;

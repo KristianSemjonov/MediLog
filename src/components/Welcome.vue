@@ -16,6 +16,11 @@
     <br>
     <div class="Contact"><a href="mailto:valiit.medilog@gmail.com?Subject=Tagasiside">Kirjuta meile!</a></div>
     <br>
+    <div class="bottomConteiner">
+      <p>Medilog© 2021</p>
+      <p>Helena | Marika | Linda | Kristian</p>
+      <p>Vali-IT projekti raames</p>
+    </div>
   </div>
 </template>
 
@@ -45,7 +50,8 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: #F9A828;
+  font-style: normal ;
 }
 
 table {
@@ -58,6 +64,12 @@ table {
 }
 .Contact{
   margin-top: 20px;
-
+}
+.bottomConteiner {
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  position: fixed;
+  bottom: 0%;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="diarybloodsugar">
-  <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
-    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
-    <button v-on:click="getData()">Vaata päevikut kehakaalu mõõtmistulemustega</button>
+<!--    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>-->
+    <button v-on:click="getData()">Ava päevik</button>
     <table class="weightTable" border="1">
       <tr>
         <th>Kuupäev</th>
@@ -44,8 +44,8 @@ export default {
         getData: getData
       }
 }
-</script>
 
+</script>
 <style scoped>
 .weightTable {
   text-align: -webkit-center;
