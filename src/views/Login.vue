@@ -11,6 +11,7 @@
       <tr>
         <td>Salasõna:</td>
         <td><input v-model="login.password" placeholder=""></td>
+
       </tr>
       <tr>
         <td></td>

@@ -48,7 +48,7 @@ let saveInJs = function () {
         }
       })
       .then(() => alert('Registreerimine õnnestus, teie andmed on salvestatud'))
-      .catch(() => alert("Registreerimine ei õnnestunud, palun proovige uuseti"));
+      .catch(() => alert("Registreerimine ei õnnestunud, palun proovige uuesti"));
 }
 
 export default {
