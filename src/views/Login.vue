@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Palun sisestage oma kasutajanimi ja salasõna:</h3>
     <table class="loginTable" cellspacing="10">
       <tbody>
@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import router from "../router";
+
 let getData = function () {
   this.$http.get('/medilog/login?username=' + this.login.username + '&password=' + this.login.password)
       .then(response => {
@@ -52,8 +54,8 @@ export default {
         getData: getData
       }
 }
-</script>
 
+</script>
 <style scoped>
 .loginTable {
   text-align: -webkit-center;

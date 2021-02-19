@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <Welcome msg="Teretulemast MediLog eTervisepäeviku lehele"/>
     <br>
   </div>
@@ -22,6 +22,9 @@ export default {
 <style scoped>
 
 </style>
+
+
+
 
 <!--#FBD46D - helekollane-->
 <!--#F9A828 - oranz-->

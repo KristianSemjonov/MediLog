@@ -2,10 +2,11 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Avaleht</router-link> |
-      <router-link to="/verer6hk">Vererõhk</router-link> |
+      <router-link to="/verer6hk">Vererõhk & pulss</router-link> |
       <router-link to="/veresuhkur">Veresuhkur</router-link> |
       <router-link to="/kehakaal">Kehakaal & KMI</router-link> |
       <router-link to="/temperatuur">Kehatemperatuur</router-link>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     </div>
     <router-view/>
   </div>
@@ -14,7 +15,7 @@
 <style>
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -23,7 +24,6 @@
 
 #nav {
   padding: 30px;
-  background-color: #4f8a8b;
 }
 
 #nav a {
