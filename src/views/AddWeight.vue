@@ -1,14 +1,14 @@
 <template>
   <div class="addweight">
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Sisestage uus kehakaalu mõõtmistulemus</h3>
     <table class="tableWeight "cellspacing="5">
       <tbody>
-      <tr>
-        <td>Kasutaja ID: </td>
-        <td><input v-model="addWeight.userId" placeholder="kustutame, kui login toimib!"></td>
-        <td></td>
-      </tr>
+<!--      <tr>-->
+<!--        <td>Kasutaja ID: </td>-->
+<!--        <td><input v-model="addWeight.userId" placeholder="kustutame, kui login toimib!"></td>-->
+<!--        <td></td>-->
+<!--      </tr>-->
       <tr>
         <td>Kuupäev: </td>
         <td><input v-model="addWeight.date" placeholder=""></td>
@@ -36,7 +36,7 @@
       </tr>
       <tr>
         <td>Lisainfo: </td>
-        <td><input v-model="addWeight.addInfo" placeholder="oluline lisateave"></td>
+        <td><textarea input v-model="addWeight.addInfo" placeholder="oluline lisateave"></textarea></td>
         <td></td>
       </tr>
       <tr>
@@ -55,19 +55,17 @@ let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
 let yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
-// document.write(today);
 
 let now = new Date();
 let hours = String(now.getHours()).padStart(2, '0');
 let minutes = String(now.getMinutes() + 1).padStart(2, '0');
 now = hours + ':' + minutes;
-// document.write(now);
 
 let saveInJs = function () {
   this.$http.post('/medilog/weight', {},
       {
         params: {
-          userId: this.addWeight.userId,
+          // userId: this.addWeight.userId,
           date: this.addWeight.date,
           time: this.addWeight.time,
           weight: this.addWeight.weight,

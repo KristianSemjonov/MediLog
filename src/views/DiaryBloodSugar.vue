@@ -1,9 +1,9 @@
 <template>
   <div class="diarybloodsugar">
-    <img alt="Medilog logo" src="../assets/mediloglarge_cut.jpg" height="240px" width="auto">
+    <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
     <h3>Vaadake päevikut veresuhkru mõõtmistulemustega</h3>
-    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>
-    <button v-on:click="getData()">Vaata päevikut veresuhkru mõõtmistulemustega</button>
+<!--    <p>Kasutaja ID: <input v-model="userId" placeholder="kustutame, kui login toimib!"></p>-->
+    <button v-on:click="getData()">Ava päevik</button>
     <table class="dairyBloodSugar" border="1">
       <tr class="dairySugar2">
         <th>Kuupäev</th>
@@ -40,13 +40,12 @@ export default {
         getData: getData
       }
 }
-</script>
 
+</script>
 <style scoped>
 .dairyBloodSugar {
   text-align: -webkit-center;
   margin-left: auto;
   margin-right: auto;
-
 }
 </style>
