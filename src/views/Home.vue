@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
-    <Welcome msg="Teretulemast MediLog eTervisepäeviku lehele"/>
+    <Welcome msg="Teretulemast MediLog e-tervise päeviku lehele"/>
     <br>
   </div>
 </template>
@@ -25,9 +25,3 @@ export default {
 
 
 
-
-<!--#FBD46D - helekollane-->
-<!--#F9A828 - oranz-->
-<!--#07617D - roheline-->
-<!--#2E383F   tumeroheline(tekst)-->
-<!--#ECECEB - valge (taust)-->
