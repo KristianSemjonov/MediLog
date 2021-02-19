@@ -11,16 +11,25 @@
       Selleks, et sisestada oma tervisenäitajate mõõtmistulemusi ja vaadata oma mõõtmistulemustega tervisepäevikut,
       palun registreeruge MediLog e-Tervisepäeviku kasutajaks alloleval lingil:</p>
 
-    <router-link to="/uuskasutaja">Uue kasutaja loomine</router-link>
+    <router-link to="/uuskasutaja">Kasutaja loomine</router-link>
     |
     <router-link to="/login">Logi sisse</router-link>
+    |
+    <router-link to="/login">Logi välja</router-link>
+
     <br>
+    <div class="center-block">
+      <img alt="Medilog logo" src="../assets/homePressure.png" height="180px" width="auto">
+      <img alt="Medilog logo" src="../assets/homeSugar.png" height="180px" width="auto">
+      <img alt="Medilog logo" src="../assets/homeTemp.png" height="180px" width="auto">
+      <img alt="Medilog logo" src="../assets/homeWeight.png" height="180px" width="auto">
+    </div>
     <div class="Contact"><a href="mailto:valiit.medilog@gmail.com?Subject=Tagasiside">Kirjuta meile!</a></div>
     <br>
     <div class="footer">
       <p>Medilog© 2021</p>
       <p>Helena | Marika | Linda | Kristian</p>
-      <p>Vali-IT projekti raames</p>
+      <p>Encouraged by Vali-IT®</p>
     </div>
   </div>
 </template>
@@ -73,5 +82,9 @@ table {
 
   font-size: small;
   bottom: 0%;
+}
+
+.center-block {
+  margin-top: 20px;
 }
 </style>
