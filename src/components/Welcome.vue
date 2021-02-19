@@ -13,7 +13,7 @@
     |
     <router-link to="/login">Logi sisse</router-link>
     |
-    <router-link to="/login">Logi välja</router-link>
+    <router-link to="/logout">Logi välja</router-link>
 
     <br>
     <div class="center-block">

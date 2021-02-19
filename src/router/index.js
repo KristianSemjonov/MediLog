@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import NewUser from "../views/NewUser";
 import Login from "../views/Login";
+import Logout from "../views/Logout";
 import BloodPressure from "../views/BloodPressure";
 import AddBloodPressure from "../views/AddBloodPressure";
 import DiaryBloodPressure from "../views/DiaryBloodPressure";
