@@ -5,6 +5,9 @@
     <br>
     <router-link to="/veresuhkrum66tmine">Sisesta veresuhkru mõõtmistulemused</router-link> |
     <router-link to="/veresuhkrupaevik">Vaata päevikut veresuhkru mõõtmistulemustega</router-link>
+    <div class="center-block">
+      <img alt="Medilog logo" src="../assets/sugar.png" height="400px" width="auto">
+    </div>
   </div>
 </template>
 

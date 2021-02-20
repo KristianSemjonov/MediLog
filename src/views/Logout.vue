@@ -2,6 +2,9 @@
   <div class="Home">
     <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto"><br>
     <button v-on:click="getData()">Logi välja</button>
+    <div class="center-block">
+      <img alt="Medilog logo" src="../assets/heart.png" height="400px" width="auto">
+    </div>
   </div>
 </template>
 

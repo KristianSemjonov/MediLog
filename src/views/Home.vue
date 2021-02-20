@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <img alt="Medilog logo" src="../assets/Medilog.png" height="180px" width="auto">
-    <Welcome msg="Teretulemast MediLog e-tervise päeviku lehele"/>
+    <Welcome msg="Teretulemast Medilog e-tervise päeviku lehele"/>
     <br>
   </div>
 </template>

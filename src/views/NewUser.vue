@@ -36,6 +36,8 @@
 <script>
 
 
+import router from "../router";
+
 let saveInJs = function () {
   this.$http.post('/medilog/createuser', {},
       {
@@ -47,7 +49,10 @@ let saveInJs = function () {
           password: this.newUser.password,
         }
       })
-      .then(() => alert('Registreerimine õnnestus, teie andmed on salvestatud'))
+      .then(() => {
+        alert('Registreerimine õnnestus, teie andmed on salvestatud')
+        router.push('/')
+      })
       .catch(() => alert("Registreerimine ei õnnestunud, palun proovige uuesti"));
 }
 
