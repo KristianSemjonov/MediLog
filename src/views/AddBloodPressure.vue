@@ -50,6 +50,8 @@ g<template>
 </template>
 
 <script>
+import router from "../router";
+
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
@@ -73,7 +75,11 @@ let saveInJs = function () {
           pulse: this.addBloodPressure.pulse,
           addInfo: this.addBloodPressure.addInfo,
         }
-      }) .then(() => alert('Andmed on salvestatud'))
+      })
+      .then(() => {
+        alert('Andmed on salvestatud')
+        router.push('/verer6hk')
+      })
       .catch(() => alert("Palun täitke kohustuslikud väljad"));
 }
 

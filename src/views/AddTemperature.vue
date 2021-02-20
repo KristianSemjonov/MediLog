@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import router from "../router";
+
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
@@ -61,7 +63,11 @@ let saveInJs = function () {
           temp: this.addTemperature.temp,
           addInfo: this.addTemperature.addInfo,
         }
-      }).then(() => alert('Andmed on salvestatud'))
+      })
+      .then(() => {
+        alert('Andmed on salvestatud')
+        router.push('/temperatuur')
+      })
       .catch(() => alert("Palun täitke kohustuslikud väljad"));
 }
 export default {

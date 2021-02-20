@@ -5,6 +5,9 @@
     <br>
     <router-link to="/kehakaalum66tmine">Sisesta kehakaalu mõõtmistulemused</router-link> |
     <router-link to="/kehakaalupaevik">Vaata päevikut kehakaalu mõõtmistulemustega</router-link>
+    <div class="center-block">
+      <img alt="Medilog logo" src="../assets/weight.png" height="400px" width="auto">
+    </div>
   </div>
 </template>
 
