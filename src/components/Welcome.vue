@@ -69,6 +69,7 @@ table {
 
 .contact {
   margin-top: 35px;
+
 }
 
 .footer {
